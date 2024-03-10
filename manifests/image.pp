@@ -144,7 +144,7 @@ define docker::image(
       logoutput   => true,
     }
   } elsif $ensure == 'latest' or $image_tag == 'latest' {
-    -> exec { "echo 'Update of ${image_arg} complete'":
+    exec { "echo 'Update of ${image_arg} complete'":
       environment => $exec_environment,
       path        => $exec_path,
       timeout     => $exec_timeout,
